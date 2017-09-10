@@ -1,0 +1,55 @@
+<ion-header>
+
+
+
+  <ion-navbar (click) ="goBack()">
+  <ion-buttons left style="margin-left:-45px;">
+        <button ion-button icon-only>
+          <ion-icon name="arrow-back"></ion-icon>
+        </button>
+    </ion-buttons>
+    <ion-title>{{heading}}</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+
+
+<ion-content padding>
+<ion-label class="subHeadingTitle">Lead - {{subHeading}}</ion-label>
+<ion-list no-lines>
+  <ion-item>
+    <h2>Executive Summary</h2>
+    
+    <button ion-button clear item-right (click)="viewSummary(clickedParameter)">View</button>
+  </ion-item>
+  <ion-item text-wrap>
+    <h2>Portfolio Activities/Accomplishments</h2>
+    
+    <button ion-button clear item-right (click)="viewPortfolioActivity(clickedParameter)" >View</button>
+  </ion-item>
+   <ion-item>
+    <h2>Risk and issues</h2>
+    
+    <button ion-button clear item-right (click)="viewRisk()">View</button>
+  </ion-item>
+   <ion-item>
+    <h2>Business Volume</h2>
+    
+    <button ion-button clear item-right (click)="viewBusinessVol(clickedParameter)">View</button>
+  </ion-item>
+   <ion-item>
+    <h2>Portfolio Roadmap</h2>
+    
+    <button ion-button clear item-right (click)="viewRoadmap(clickedParameter)">View</button>
+  </ion-item>
+</ion-list>
+
+
+</ion-content>
+
+ <ion-footer>
+        <p class="text-color">@Fannie Mae</p>
+ </ion-footer>

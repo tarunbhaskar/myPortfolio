@@ -1,0 +1,167 @@
+[
+ {
+    "id": "8a2bf844-42b5-482d-9f57-cf1583229939",
+    "firstName": "Promod",
+    "lastName": "Singh",
+    "summary": {
+      "heading": "Structured Transaction",
+      "info": "Technology Team is responsible Technology Team is responsible Technology Team is responsible Technology Team is responsible Technology Team is responsible Technology Team is responsible Technology Team is responsible Technology Team is responsible Technology Team is responsible",
+      "numberOfApps": "11",
+      "externalFacing": "1",
+      "bhsClassification": {
+          "buyApps": "9",
+          "holdApps" : "0",
+          "sellApps" : "2"
+      }
+    },
+    "accomplishments":{
+      "enterpriseService":{
+      	"title" : "Enterprise Settlement Service",
+        "desc1" : "AutoWire 2.0",
+        "desc2" : "STCMS 15.2",
+        "desc3" : "STTS 16.1",
+        "desc4" : "Retire CMO"
+      },
+     "CIE" : {
+     "title" : "CIE",
+      "desc1" : "IRIS",
+      "desc2" : "STCMS"
+     },
+     "CSPI": {
+     	"title" : "CSPI",
+       "desc1" : "IRIS SC",
+        "desc2" : "IRIS MC",
+        "desc3" : "MBS Tax",
+        "desc4" : "STCMS",
+        "desc5" : "REMIC Tax"
+     },
+     "BAU" : {
+     "title" : "BAU",
+      "desc1" : "SF Mega Disclosure",
+      "desc2" : "MBS Tax",
+      "desc3" : "IRS Bond Admin"
+     }
+    }
+  },
+  {
+      "id": "8a8cb0fa-981c-4ed6-bf8a-ef0a84657198",
+    "firstName": "Serveri",
+    "lastName": "Roy",
+    "summary": {
+      "heading": "Asset Servicing",
+      "info": "Portfolio support specialized servicing",
+      "numberOfApps": "13",
+      "externalFacing": "4",
+      "bhsClassification": {
+          "buyApps": "0",
+          "holdApps" : "10",
+          "sellApps" : "3"
+      }
+    },
+    "accomplishments":{
+      "enterpriseService":{
+        "desc1" : "AutoWire 2.0",
+        "desc2" : "STCMS 15.2",
+        "desc3" : "STTS 16.1",
+        "desc4" : "Retire CMO"
+      },
+     "CIE" : {
+      "desc1" : "IRIS",
+      "desc2" : "STCMS"
+     },
+     "CSPI": {
+       "desc1" : "IRIS SC",
+        "desc2" : "IRIS MC",
+        "desc3" : "MBS Tax",
+        "desc4" : "STCMS",
+        "desc5" : "REMIC Tax"
+     },
+     "BAU" : {
+      "desc1" : "SF Mega Disclosure",
+      "desc2" : "MBS Tax",
+      "desc3" : "IRS Bond Admin"
+     }
+    }
+  },
+  {
+      "id": "aa82640a-e24e-44a6-a642-b8cc8ce2143f",
+    "firstName": "Nanjan",
+    "lastName": "Singh",
+    "summary": {
+      "heading": "Disclosures",
+      "info": "MBS Application disclosure support",
+      "numberOfApps": "11",
+      "externalFacing": "1",
+      "bhsClassification": {
+          "buyApps": "9",
+          "holdApps" : "0",
+          "sellApps" : "2"
+      }
+    },
+    "accomplishments":{
+      "enterpriseService":{
+        "desc1" : "AutoWire 2.0",
+        "desc2" : "STCMS 15.2",
+        "desc3" : "STTS 16.1",
+        "desc4" : "Retire CMO"
+      },
+     "CIE" : {
+      "desc1" : "IRIS",
+      "desc2" : "STCMS"
+     },
+     "CSPI": {
+       "desc1" : "IRIS SC",
+        "desc2" : "IRIS MC",
+        "desc3" : "MBS Tax",
+        "desc4" : "STCMS",
+        "desc5" : "REMIC Tax"
+     },
+     "BAU" : {
+      "desc1" : "SF Mega Disclosure",
+      "desc2" : "MBS Tax",
+      "desc3" : "IRS Bond Admin"
+     }
+    }
+  },
+  {
+      "id": "8a2bf844-42b5-482d-9f57-cf1583229939",
+    "firstName": "Michael",
+    "lastName": "Singh",
+    "summary": {
+      "heading": "Investor Reporting",
+      "info": "SIR is a custom build",
+      "numberOfApps": "5",
+      "externalFacing": "1",
+      "bhsClassification": {
+          "buyApps": "9",
+          "holdApps" : "0",
+          "sellApps" : "2"
+      }
+    },
+    "accomplishments":{
+      "enterpriseService":{
+        "desc1" : "AutoWire 2.0",
+        "desc2" : "STCMS 15.2",
+        "desc3" : "STTS 16.1",
+        "desc4" : "Retire CMO"
+      },
+     "CIE" : {
+      "desc1" : "IRIS",
+      "desc2" : "STCMS"
+     },
+     "CSPI": {
+       "desc1" : "IRIS SC",
+        "desc2" : "IRIS MC",
+        "desc3" : "MBS Tax",
+        "desc4" : "STCMS",
+        "desc5" : "REMIC Tax"
+     },
+     "BAU" : {
+      "desc1" : "SF Mega Disclosure",
+      "desc2" : "MBS Tax",
+      "desc3" : "IRS Bond Admin"
+     }
+    }
+  }
+  
+]

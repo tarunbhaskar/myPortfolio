@@ -1,0 +1,154 @@
+<ion-header>
+    <ion-navbar>
+     <ion-buttons left style="margin-left:-45px;">
+        <button ion-button icon-only>
+          <ion-icon name="arrow-back"></ion-icon>
+        </button>
+    </ion-buttons>
+        <ion-title (click)="goBack()">Roadmap Details</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+	<ion-spinner class="spinner" name="ios" *ngIf="showSpinner"></ion-spinner>
+    <ion-label class="title" *ngIf="parameter1 == 'monthwise'">{{data ? data[0]['accomplishments/enterpriseService/title'] : ""}}</ion-label>
+    <ion-list no-lines text-wrap *ngIf="parameter1 == 'monthwise'">
+		   <ion-item >
+		   	{{data ? data[0]['accomplishments/enterpriseService/desc1'] : ""}}
+		  </ion-item >
+		  <ion-item >
+		    {{data ? data[0]['accomplishments/enterpriseService/desc2'] : ""}}
+		  </ion-item >
+		  <ion-item >
+		    {{data ? data[0]['accomplishments/enterpriseService/desc3'] : ""}}
+		  </ion-item >
+		   <ion-item >
+		    {{data ? data[0]['accomplishments/enterpriseService/desc4'] : ""}}
+		  </ion-item>
+    </ion-list>
+    <ion-list *ngIf="parameter1 == 'Q1'" text-wrap>
+        <ion-list-header class="road-map-header">
+            Jan
+        </ion-list-header>
+       <ion-item >
+		   	{{data ? data[0]['accomplishments/enterpriseService/desc1'] : ""}}
+		  </ion-item >
+		  <ion-item >
+		    {{data ? data[0]['accomplishments/enterpriseService/desc2'] : ""}}
+		  </ion-item >
+		  <ion-item >
+		    {{data ? data[0]['accomplishments/enterpriseService/desc3'] : ""}}
+		  </ion-item >
+		   <ion-item >
+		    {{data ? data[0]['accomplishments/enterpriseService/desc4'] : ""}}
+		  </ion-item>
+        <ion-list-header class="road-map-header">
+            Feb
+        </ion-list-header>
+        <ion-list-header class="road-map-header">
+            Mar
+        </ion-list-header>
+       <ion-item >
+		   	{{data ? data[0]['accomplishments/enterpriseService/desc1'] : ""}}
+		  </ion-item >
+		  <ion-item >
+		    {{data ? data[0]['accomplishments/enterpriseService/desc2'] : ""}}
+		  </ion-item >
+		  <ion-item >
+		    {{data ? data[0]['accomplishments/enterpriseService/desc3'] : ""}}
+		  </ion-item >
+    </ion-list>
+    <ion-list *ngIf="parameter1 == 'Q2'" text-wrap>
+        <ion-list-header class="road-map-header">
+            Apr
+        </ion-list-header>
+       <ion-item >
+		   	{{data ? data[0]['accomplishments/enterpriseService/desc1'] : ""}}
+		  </ion-item >
+		  <ion-item >
+		    {{data ? data[0]['accomplishments/enterpriseService/desc2'] : ""}}
+		  </ion-item >
+		  <ion-item >
+		    {{data ? data[0]['accomplishments/enterpriseService/desc3'] : ""}}
+		  </ion-item >
+		   <ion-item >
+		    {{data ? data[0]['accomplishments/enterpriseService/desc4'] : ""}}
+		  </ion-item>
+        <ion-list-header class="road-map-header">
+            May
+        </ion-list-header>
+        <ion-list-header class="road-map-header">
+            Jun
+        </ion-list-header>
+        <ion-item >
+		   	{{data ? data[0]['accomplishments/enterpriseService/desc1'] : ""}}
+		  </ion-item >
+		  <ion-item >
+		    {{data ? data[0]['accomplishments/enterpriseService/desc2'] : ""}}
+		  </ion-item >
+		  <ion-item >
+		    {{data ? data[0]['accomplishments/enterpriseService/desc3'] : ""}}
+		  </ion-item >
+    </ion-list>
+    <ion-list *ngIf="parameter1 == 'Q3'" text-wrap>
+        <ion-list-header class="road-map-header">
+            Jul
+        </ion-list-header>
+        <ion-item >
+		   	{{data ? data[0]['accomplishments/enterpriseService/desc1'] : ""}}
+		  </ion-item >
+		  <ion-item >
+		    {{data ? data[0]['accomplishments/enterpriseService/desc2'] : ""}}
+		  </ion-item >
+		  <ion-item >
+		    {{data ? data[0]['accomplishments/enterpriseService/desc3'] : ""}}
+		  </ion-item >
+		   <ion-item >
+		    {{data ? data[0]['accomplishments/enterpriseService/desc4'] : ""}}
+		  </ion-item>
+        <ion-list-header class="road-map-header">
+            Aug
+        </ion-list-header>
+        <ion-list-header class="road-map-header">
+            Sep
+        </ion-list-header>
+        <ion-item >
+		   	{{data ? data[0]['accomplishments/enterpriseService/desc1'] : ""}}
+		  </ion-item >
+		  <ion-item >
+		    {{data ? data[0]['accomplishments/enterpriseService/desc2'] : ""}}
+		  </ion-item >
+		  <ion-item >
+		    {{data ? data[0]['accomplishments/enterpriseService/desc3'] : ""}}
+		  </ion-item >
+    </ion-list>
+     <ion-list *ngIf="parameter1 == 'Q4'" text-wrap>
+        <ion-list-header class="road-map-header">
+            Oct
+        </ion-list-header>
+        <ion-item >
+		   	{{data ? data[0]['accomplishments/enterpriseService/desc1'] : ""}}
+		  </ion-item >
+		  <ion-item >
+		    {{data ? data[0]['accomplishments/enterpriseService/desc2'] : ""}}
+		  </ion-item >
+		  <ion-item >
+		    {{data ? data[0]['accomplishments/enterpriseService/desc3'] : ""}}
+		  </ion-item >
+        <ion-list-header class="road-map-header">
+            Nov
+        </ion-list-header>
+        <ion-list-header class="road-map-header">
+            Dec
+        </ion-list-header>
+        <ion-item >
+		   	{{data ? data[0]['accomplishments/enterpriseService/desc1'] : ""}}
+		  </ion-item >
+		  <ion-item >
+		    {{data ? data[0]['accomplishments/enterpriseService/desc2'] : ""}}
+		  </ion-item >
+		  <ion-item >
+		    {{data ? data[0]['accomplishments/enterpriseService/desc3'] : ""}}
+		  </ion-item >
+		   
+    </ion-list>
+</ion-content>

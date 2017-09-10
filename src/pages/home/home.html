@@ -1,0 +1,163 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-wrap>
+      Securitization & Servicing
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+<ion-spinner class="spinner" name="ios" *ngIf="showSpinner"></ion-spinner>
+<ion-list no-lines>
+  <ion-item text-wrap>
+  <ion-icon class= "custom-icon-sunny" name="sunny" item-left ></ion-icon>
+    <h2>Structured Transaction</h2>
+    <button ion-button clear item-right (click)="viewDetails('dir1')">View</button>
+  </ion-item>
+  <ion-item text-wrap>
+  <ion-icon class= "custom-icon-cloudy"  name="cloudy" item-left></ion-icon>
+    <h2>Master/Asset Servicing</h2>
+    
+    <button ion-button clear item-right (click)="viewDetails('dir2')">View</button>
+  </ion-item>
+  <ion-item text-wrap>
+  <ion-icon class= "custom-icon-sunny"  name="sunny" item-left></ion-icon>
+    <h2>Pooling/Disclosures</h2>
+    
+    <button ion-button clear item-right (click)="viewDetails('dir3')">View</button>
+  </ion-item>
+  <ion-item text-wrap>
+  <ion-icon name="rainy" item-left (click)="showAlert()"></ion-icon>
+    <h2>Investor Reporting</h2>
+    
+    <button ion-button clear item-right (click)="viewDetails('dir4')">View</button>
+  </ion-item>
+</ion-list>
+
+<ion-card style="width:90%">
+<ion-slides pager>
+  <ion-slide class="graph-display">
+
+  <ion-label class="title">TRAM / Application Security Finding</ion-label>
+
+   <chart [options] = "chartoptionsTram" type="chart" class="chart-margin"></chart>
+    <ion-grid class="table-border">
+  <ion-row align-items-start class="header">
+    <ion-col col-4>
+      Asset
+    </ion-col>
+    <ion-col col-4>
+      Finding
+    </ion-col>
+    <ion-col col-4>
+      Observation
+    </ion-col>
+  </ion-row>
+
+  <ion-row align-items-start *ngFor= 'let det of data'>
+    <ion-col col-4>
+      {{det ? det['tram/asset'] : ""}}
+    </ion-col>
+    <ion-col col-4>
+     {{det ? det['tram/finding'] : ""}}
+    </ion-col>
+    <ion-col col-4>
+     {{det ? det['tram/Observation'] : ""}}
+    </ion-col>
+  </ion-row>
+</ion-grid>
+  </ion-slide>
+  <ion-slide class="graph-display">
+  <ion-label class="title">MUL Finding</ion-label>
+
+  <chart [options] = "chartoptionsMul" type="chart" ></chart>
+
+    <ion-grid class="chart-border">
+  <ion-row align-items-start >
+    <ion-col col-6 class="header">
+      Structured Transaction
+    </ion-col>
+    <ion-col col-6>
+      {{data? data[0]['mul/structuredTran'] : ""}}
+    </ion-col>
+   
+  </ion-row>
+
+  <ion-row align-items-start>
+    <ion-col col-6 class="header">
+      Asset Servicing
+    </ion-col>
+    <ion-col col-6>
+      {{data? data[0]['mul/assetServicing'] : ""}}
+    </ion-col>
+  </ion-row>
+
+  <ion-row align-items-start>
+    <ion-col col-6 class="header">
+      Issuance/Disclosures
+    </ion-col>
+    <ion-col col-6>
+      {{data? data[0]['mul/issuance'] : ""}}
+    </ion-col>
+  </ion-row>
+   <ion-row align-items-start>
+    <ion-col col-6 class="header">
+      Investor Reporting
+    </ion-col>
+    <ion-col col-6>
+      {{data? data[0]['mul/reporting'] : ""}}
+    </ion-col>
+  </ion-row>
+</ion-grid>
+  </ion-slide>
+  <ion-slide class="graph-display">
+    <ion-label class="title">Problem Tickets</ion-label>
+
+<chart [options] = "chartoptionsTickets" type="chart" ></chart>
+
+<ion-grid class="chart-border">
+  <ion-row align-items-start class="header">
+    <ion-col col-3>
+      Portfolio
+    </ion-col>
+    <ion-col col-3>
+      Closed
+    </ion-col>
+    <ion-col col-3>
+     Completed
+    </ion-col>
+    <ion-col col-3>
+      Under Review
+    </ion-col>
+  </ion-row>
+
+  <ion-row align-items-start *ngFor= 'let det of data'>
+    <ion-col col-3>
+      {{det ? det['tickets/portfolio'] : ""}}
+    </ion-col>
+    <ion-col col-3>
+     {{det ? det['tickets/closed'] : ""}}
+    </ion-col>
+    <ion-col col-3>
+      {{det ? det['tickets/completed'] : ""}}
+    </ion-col>
+    <ion-col col-3>
+      {{det ? det['tickets/review'] : ""}}
+    </ion-col>
+  </ion-row>
+</ion-grid>
+  </ion-slide>
+</ion-slides>
+
+</ion-card>
+
+
+
+
+
+
+
+</ion-content>
+ <ion-footer>
+        <p class="text-color">&copy;Fannie Mae</p>
+ </ion-footer>

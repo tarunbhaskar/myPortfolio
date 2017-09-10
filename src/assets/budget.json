@@ -1,0 +1,21 @@
+[
+  	{
+    "Portfolio": "Structured Transaction",
+    "Issue": "SF Mega Disclosure",
+    "Impact" : "Medium",
+    "Notes" : "Schedule needs to account"
+  	},
+  	{
+    "Portfolio": "Master Servicing",
+    "Issue": "Lack of SME Depth",
+    "Impact" : "High",
+    "Notes" : "Increased team depth"
+  	},
+  	{
+    "Portfolio": "Investor Reporting",
+    "Issue": "SI and BAU Enhancements",
+    "Impact" : "",
+    "Notes" : "Efficiencies in managing multiple"
+  	}
+
+  	]

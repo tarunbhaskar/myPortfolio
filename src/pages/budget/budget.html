@@ -1,0 +1,225 @@
+<ion-header *ngIf="parameter1 == 'dir1'">
+
+  <ion-navbar (click) ="goBack()">
+   <ion-buttons left style="margin-left:-45px;">
+        <button ion-button icon-only>
+          <ion-icon name="arrow-back"></ion-icon>
+        </button>
+    </ion-buttons>
+    <ion-title >Budget
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-header *ngIf="parameter1 == 'dir2'" (click) ="goBack()">
+
+  <ion-navbar class="heading-title">
+    <ion-title >Budget
+    	
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-header *ngIf="parameter1 == 'dir3'" (click) ="goBack()">
+
+  <ion-navbar class="heading-title">
+    <ion-title>Budget
+    	
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-header *ngIf="parameter1 == 'dir4'" (click) ="goBack()">
+
+  <ion-navbar class="heading-title">
+    <ion-title>Budget
+    	
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content *ngIf="parameter1 == 'dir1'">
+
+<ion-label class="subHeadingTitle">Lead - Pramod Singh</ion-label>
+
+<ion-spinner class="spinner" name="ios" *ngIf="showSpinner"></ion-spinner>
+
+ <ion-item  text-wrap>
+    <h2>Business Volume -</h2>
+     <ion-grid class="table-border">
+  <ion-row align-items-start class="header">
+    <ion-col col-4>
+      Transaction
+    </ion-col>
+    <ion-col col-4>
+      Quantity
+    </ion-col>
+     <ion-col col-4>
+      Volume (in millions)
+    </ion-col>
+  </ion-row>
+
+  <ion-row align-items-start *ngFor='let tran of data'>
+       <ion-col col-4>
+      {{tran ? tran.Transaction : ""}}
+    </ion-col>
+    <ion-col col-4>
+     {{tran ? tran.Quantity : ""}}
+    </ion-col>
+     <ion-col col-4>
+      {{tran ? tran.Volume : ""}}
+    </ion-col>
+    </ion-row>
+</ion-grid>
+  </ion-item>
+
+   <ion-label class="title">Transactions Budget</ion-label>
+
+   <chart [options] = "chartoptionsTram" type="chart" class="chart-margin"></chart>
+
+</ion-content>
+<ion-content *ngIf="parameter1 == 'dir2'">
+<ion-label class="subHeadingTitle">Lead - {{data ? data[1].firstName : ""}} {{data ? data[1].lastName : ""}}</ion-label>
+
+  <ion-item  text-wrap>
+    <h2>Business Volume -</h2>
+     <ion-grid class="table-border">
+  <ion-row align-items-start class="header">
+    <ion-col col-4>
+      Transaction
+    </ion-col>
+    <ion-col col-4>
+      Quantity
+    </ion-col>
+     <ion-col col-4>
+      Volume (in millions)
+    </ion-col>
+  </ion-row>
+
+  <ion-row align-items-start>
+       <ion-col col-4>
+      REMICS
+    </ion-col>
+    <ion-col col-4>
+      10
+    </ion-col>
+     <ion-col col-4>
+      1.2 
+    </ion-col>
+    </ion-row>
+     <ion-row align-items-start>
+       <ion-col col-4>
+      MEGA
+    </ion-col>
+    <ion-col col-4>
+      5
+    </ion-col>
+     <ion-col col-4>
+      2
+    </ion-col>
+  </ion-row>
+</ion-grid>
+  </ion-item>
+
+</ion-content>
+<ion-content *ngIf="parameter1 == 'dir3'">
+<ion-label class="subHeadingTitle">Lead - {{data ? data[2].firstName : ""}} {{data ? data[2].lastName : ""}}</ion-label>
+
+  <ion-item  text-wrap>
+    <h2>Business Volume -</h2>
+     <ion-grid class="table-border">
+  <ion-row align-items-start class="header">
+    <ion-col col-4>
+      Transaction
+    </ion-col>
+    <ion-col col-4>
+     Quantity
+    </ion-col>
+     <ion-col col-4>
+      Volume (in millions)
+    </ion-col>
+  </ion-row>
+
+  <ion-row align-items-start>
+       <ion-col col-4>
+      REMICS
+    </ion-col>
+    <ion-col col-4>
+      10
+    </ion-col>
+     <ion-col col-4>
+      1.2 
+    </ion-col>
+    </ion-row>
+     <ion-row align-items-start>
+       <ion-col col-4>
+      MEGA
+    </ion-col>
+    <ion-col col-4>
+      5
+    </ion-col>
+     <ion-col col-4>
+      2
+    </ion-col>
+  </ion-row>
+</ion-grid>
+  </ion-item>
+
+</ion-content>
+<ion-content *ngIf="parameter1 == 'dir4'">
+<ion-label class="subHeadingTitle">Lead - {{data ? data[3].firstName : ""}} {{data ? data[3].lastName : ""}}</ion-label>
+
+  <ion-item  text-wrap>
+    <h2>Business Volume -</h2>
+     <ion-grid class="table-border">
+  <ion-row align-items-start class="header">
+    <ion-col col-4>
+      Transaction
+    </ion-col>
+    <ion-col col-4>
+      Quantity
+    </ion-col>
+     <ion-col col-4>
+      Volume (in millions)
+    </ion-col>
+  </ion-row>
+
+  <ion-row align-items-start>
+       <ion-col col-4>
+      REMICS
+    </ion-col>
+    <ion-col col-4>
+      10
+    </ion-col>
+     <ion-col col-4>
+      1.2 
+    </ion-col>
+    </ion-row>
+     <ion-row align-items-start>
+       <ion-col col-4>
+      MEGA
+    </ion-col>
+    <ion-col col-4>
+      5
+    </ion-col>
+     <ion-col col-4>
+      2
+    </ion-col>
+  </ion-row>
+</ion-grid>
+  </ion-item>
+
+
+   <ion-label class="title">TRAM / Application Security Finding</ion-label>
+
+   <chart [options] = "chartoptionsTram" type="chart" class="chart-margin"></chart>
+
+</ion-content>
+
+<ion-footer>
+        <p class="text-color">&copy;Fannie Mae</p>
+ </ion-footer>

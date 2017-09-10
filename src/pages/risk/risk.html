@@ -1,0 +1,63 @@
+<ion-header>
+
+  <ion-navbar (click) ="goBack()">
+   <ion-buttons left style="margin-left:-45px;">
+        <button ion-button icon-only>
+          <ion-icon name="arrow-back"></ion-icon>
+        </button>
+    </ion-buttons>
+    <ion-title>Risk</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+
+
+<ion-searchbar class="searchbar"
+  [(ngModel)]="searchText"
+  [showCancelButton]="shouldShowCancel"
+  (ionInput)="searchFn($event)"
+  (ionCancel)="onCancel($event)">
+</ion-searchbar>
+<ion-spinner class="spinner" name="ios" *ngIf="showSpinner"></ion-spinner>
+<ion-grid>
+  <ion-row align-items-start class="header">
+    <ion-col col-3>
+      Portfolio
+    </ion-col >
+    <ion-col col-3>
+      Risk/Issue
+    </ion-col>
+    <ion-col col-3>
+     Impact
+    </ion-col>
+    <ion-col col-3>
+      Notes
+    </ion-col>
+  </ion-row>
+
+  
+
+  <ion-row align-items-start *ngFor='let det of data | search:searchText'>
+    <ion-col col-3>
+     {{det ? det.Portfolio : ""}}
+    </ion-col>
+    <ion-col col-3>
+      {{det?det.Issue :""}}
+    </ion-col>
+    <ion-col col-3>
+      {{det?det.Impact :""}}
+    </ion-col>
+    <ion-col col-3>
+      {{det?det.Notes:""}}
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+</ion-content>
+<ion-footer>
+        <p class="text-color">@Fannie Mae</p>
+ </ion-footer>

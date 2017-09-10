@@ -1,0 +1,70 @@
+<ion-header>
+
+  <ion-navbar (click) ="goBack()">
+   <ion-buttons left style="margin-left:-45px;">
+        <button ion-button icon-only>
+          <ion-icon name="arrow-back"></ion-icon>
+        </button>
+    </ion-buttons>
+    <ion-title>Structured Transaction</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+<ion-label class="subHeadingTitle">Lead - Pramod Singh</ion-label>
+<ion-spinner class="spinner" name="ios" *ngIf="showSpinner"></ion-spinner>
+<ion-list no-lines>
+  <ion-item text-wrap>
+    <h2>{{ data ? data[0].appName : ""}}</h2>
+    
+    <button ion-button clear item-right (click)="viewAppDetails('AutoWire')">View</button>
+  </ion-item>
+  <ion-item text-wrap>
+    <h2>{{ data ? data[1].appName : ""}}</h2>
+    
+    <button ion-button clear item-right (click)="viewAppDetails('STTS')">View</button>
+  </ion-item>
+  <ion-item text-wrap>
+    <h2>{{ data ? data[2].appName : ""}}</h2>
+    
+    <button ion-button clear item-right (click)="viewAppDetails('STCMS')">View</button>
+  </ion-item>
+  <ion-item text-wrap>
+    <h2>{{ data ? data[3].appName : ""}}</h2>
+    
+    <button ion-button clear item-right (click)="viewAppDetails('InvestorDirect')">View</button>
+  </ion-item>
+  <ion-item text-wrap>
+    <h2>{{ data ? data[4].appName : ""}}</h2>
+    
+    <button ion-button clear item-right (click)="viewAppDetails('SFMega')">View</button>
+  </ion-item>
+  <ion-item text-wrap>
+    <h2>{{ data ? data[5].appName : ""}}</h2>
+    
+    <button ion-button clear item-right (click)="viewAppDetails('IRISSC')">View</button>
+  </ion-item>
+  <ion-item text-wrap>
+    <h2>{{ data ? data[6].appName : ""}}</h2>
+    
+    <button ion-button clear item-right (click)="viewAppDetails('IRISMC')">View</button>
+  </ion-item>
+   <ion-item text-wrap>
+    <h2>{{ data ? data[7].appName : ""}}</h2>
+    
+    <button ion-button clear item-right (click)="viewAppDetails('MBSTax')">View</button>
+  </ion-item>
+   <ion-item text-wrap>
+    <h2>{{ data ? data[8].appName : ""}}</h2>
+    
+    <button ion-button clear item-right (click)="viewAppDetails('REMICTax')">View</button>
+  </ion-item>
+</ion-list>
+
+
+</ion-content>
+
+<ion-footer>
+        <p class="text-color">&copy;Fannie Mae</p>
+ </ion-footer>
