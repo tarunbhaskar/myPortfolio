@@ -22,6 +22,8 @@ export class AppDetails {
 		private parameter1 :string = "";
      	private showSpinner:boolean = false;
      	private displayAppDetail : any;
+       private isExternalFacing:string = "No";
+       private showPOC:boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams , public appDetailsService :  AppDetailsService) {
   		this.showSpinner =true;
@@ -63,6 +65,8 @@ export class AppDetails {
     	for(let i=0 ; i< data.length; i++){
     		if(data[i].appName === this.clickedParameter){
     			this.displayAppDetail = data[i];
+          this.isExternalFacing = data[i].isExternalFacing;
+          this.showPOC = data[i] && data[i].poc !== "" ? true : false;
     		}
     	}
 

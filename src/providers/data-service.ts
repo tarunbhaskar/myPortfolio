@@ -9,7 +9,7 @@ import 'rxjs/add/observable/throw';
 export class DataService {
 
 	private url : string ="https://sheetsu.com/apis/v1.0/7ac0bfcca506";
-  private url1 : string = "https://s3.amazonaws.com/mobiletest-dev1.com/data.json"
+ // private url1 : string = "https://s3.amazonaws.com/mobiletest-dev1.com/data.json"
 	private data : any;
 
   constructor(public http: Http) {
@@ -188,7 +188,7 @@ export class DataService {
   
   if (this.data) {
     return Promise.resolve(this.data);
-  }
+  }else {
   return new Promise(resolve => {
     this.http.get(this.url)
       .map(res => res.json())
@@ -197,6 +197,7 @@ export class DataService {
         resolve(this.data);
       });
   });
+}
 
      }
 

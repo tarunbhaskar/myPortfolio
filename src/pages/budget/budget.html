@@ -6,7 +6,7 @@
           <ion-icon name="arrow-back"></ion-icon>
         </button>
     </ion-buttons>
-    <ion-title >Budget
+    <ion-title >Business Volume
     </ion-title>
   </ion-navbar>
 
@@ -15,7 +15,7 @@
 <ion-header *ngIf="parameter1 == 'dir2'" (click) ="goBack()">
 
   <ion-navbar class="heading-title">
-    <ion-title >Budget
+    <ion-title >Business Volume
     	
     </ion-title>
   </ion-navbar>
@@ -24,7 +24,7 @@
 <ion-header *ngIf="parameter1 == 'dir3'" (click) ="goBack()">
 
   <ion-navbar class="heading-title">
-    <ion-title>Budget
+    <ion-title>Business Volume
     	
     </ion-title>
   </ion-navbar>
@@ -34,7 +34,7 @@
 <ion-header *ngIf="parameter1 == 'dir4'" (click) ="goBack()">
 
   <ion-navbar class="heading-title">
-    <ion-title>Budget
+    <ion-title>Business Volume
     	
     </ion-title>
   </ion-navbar>
@@ -44,12 +44,16 @@
 
 <ion-content *ngIf="parameter1 == 'dir1'">
 
-<ion-label class="subHeadingTitle">Lead - Pramod Singh</ion-label>
+<ion-label class="subHeadingTitle">Lead - Pramod Singh
+  <a href="tel::{{5712656593}}" class="call">
+          <ion-icon name="call" item-left style="margin-left:15px;"></ion-icon>
+        </a>
+</ion-label>
 
 <ion-spinner class="spinner" name="ios" *ngIf="showSpinner"></ion-spinner>
 
  <ion-item  text-wrap>
-    <h2>Business Volume -</h2>
+    <h2>Business Volume  (September) -</h2>
      <ion-grid class="table-border">
   <ion-row align-items-start class="header">
     <ion-col col-4>
@@ -59,7 +63,7 @@
       Quantity
     </ion-col>
      <ion-col col-4>
-      Volume (in millions)
+      Volume (bb)
     </ion-col>
   </ion-row>
 
@@ -76,8 +80,6 @@
     </ion-row>
 </ion-grid>
   </ion-item>
-
-   <ion-label class="title">Transactions Budget</ion-label>
 
    <chart [options] = "chartoptionsTram" type="chart" class="chart-margin"></chart>
 

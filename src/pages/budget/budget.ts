@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {BudgetService} from '../../providers/budget-service';
+import {PassDataService} from '../../providers/pass-data-service';
 
 /**
  * Generated class for the Budget page.
@@ -12,7 +13,7 @@ import {BudgetService} from '../../providers/budget-service';
 @Component({
   selector: 'page-budget',
   templateUrl: 'budget.html',
-  providers: [BudgetService]
+  providers: [BudgetService , PassDataService]
 })
 export class Budget {
 
@@ -24,7 +25,7 @@ export class Budget {
   private list_Volume= [];
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams , public budgetService :  BudgetService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams , public budgetService :  BudgetService , public passDataService: PassDataService) {
     this.showSpinner = true;
   	this.parameter1 = navParams.get('paramPassed');
   	console.log('this.parameter1' + this.parameter1);
@@ -33,6 +34,7 @@ export class Budget {
 
   ngOnInit() {
             this.loadAll();
+        //  this.readData(this.passDataService.getBudgetDetail());
     }
 
     loadAll() {
@@ -47,7 +49,7 @@ export class Budget {
 
      readData(data){
 
-    for(let i = 0 ; i< data.length ; i++){
+     for(let i = 0 ; i< data.length ; i++){
            this.list_quantity.push(parseInt(data[i]['Quantity']));
            this.list_Volume.push(parseInt(data[i]['Volume']));
           }
@@ -68,14 +70,14 @@ export class Budget {
         },
 
         title: {
-            text: 'Transactions Budget'
+            text: 'Structured Transactions Volume'
         },
         xAxis: {
             categories: ['REMICS', 'MEGAs']
         },
         yAxis: {
             title: {
-                text: 'Observation'
+                text: ''
             }
         },
         series: [{

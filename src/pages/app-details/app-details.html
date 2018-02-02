@@ -14,7 +14,7 @@
 
 
 <ion-content padding>
- <ion-label class="title">{{clickedParameter}}</ion-label>
+ <ion-label class="title-detail">{{clickedParameter}}</ion-label>
  <ion-spinner class="spinner" name="ios" *ngIf="showSpinner"></ion-spinner>
   <ion-list no-lines>
  <ion-item  text-wrap>
@@ -69,6 +69,32 @@
   </ion-row>
 </ion-grid>
   </ion-item>
+   <ion-item >
+    <ion-row align-items-start>
+     <ion-col col-7 class="external-facing" >
+     <h2>External Facing</h2>
+    </ion-col>
+     <ion-col col-5 >
+     <ion-icon name="checkmark-circle-outline" item-left *ngIf="isExternalFacing === 'Yes'"></ion-icon>
+     <ion-icon name="close-circle" item-left *ngIf="isExternalFacing === 'No'"></ion-icon>
+    </ion-col>
+     </ion-row>
+    </ion-item>
+
+    <ion-item *ngIf="showPOC">
+    <ion-row align-items-start >
+     <ion-col col-4 >
+     <h2>POC : </h2>
+    </ion-col>
+     <ion-col col-8 >
+      <p>{{displayAppDetail ? displayAppDetail.poc : ""}}</p>
+      <a href="tel::{{displayAppDetail ? displayAppDetail['pocContact'] : ''}}" class="call">
+          <ion-icon name="call" item-left></ion-icon>
+        </a>
+    </ion-col>
+     </ion-row>
+    </ion-item>
+   
   <ion-item  text-wrap>
     <!--ion-icon class="icon-size"  name="square-outline" item-left></ion-icon-->
     <h2>Recent Activity -</h2>

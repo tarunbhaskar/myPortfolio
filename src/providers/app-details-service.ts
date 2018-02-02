@@ -15,14 +15,18 @@ import 'rxjs/add/observable/throw';
 export class AppDetailsService {
 
   private data:any;
-  private url : string = 'https://sheetsu.com/apis/v1.0/e41cfa1a339a';
+  private urlAppDetails : string = 'https://sheetsu.com/apis/v1.0/e41cfa1a339a';
+//private urlAppDetails : string = 'https://fmc-devl-eb-01-webapp.e003.fanniemae.com/api/myportfolio/appDetails';
+
+//  private urlRisk : string = 'https://sheetsu.com/apis/v1.0/e41cfa1a339a';
+ //  private urlBudget : string = 'https://sheetsu.com/apis/v1.0/e41cfa1a339a';
 
   constructor(public http: Http) {
   }
 
   getData():any{
 
-   return this.http.get(this.url)
+   return this.http.get(this.urlAppDetails)
       .map(res =>
        res.json());
                

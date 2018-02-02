@@ -6,7 +6,7 @@
           <ion-icon name="arrow-back"></ion-icon>
         </button>
     </ion-buttons>
-    <ion-title>Portfolio Activity</ion-title>
+    <ion-title>Portfolio Activities</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -18,38 +18,21 @@
 
 <ion-slides>
 
-  <ion-slide>
-  <ion-spinner class="spinner" name="ios" *ngIf="showSpinner"></ion-spinner>
-  <ion-label class="title">{{data ? data[0]['accomplishments/enterpriseService/title'] : ""}}</ion-label>
-    
-    <ion-list no-lines text-wrap>
-  <ion-item >
-   	{{data ? data[0]['accomplishments/enterpriseService/desc1'] : ""}}
-  </ion-item >
-  <ion-item >
-    {{data ? data[0]['accomplishments/enterpriseService/desc2'] : ""}}
-  </ion-item >
-  <ion-item >
-    {{data ? data[0]['accomplishments/enterpriseService/desc3'] : ""}}
-  </ion-item >
-   <ion-item >
-    {{data ? data[0]['accomplishments/enterpriseService/desc4'] : ""}}
-  </ion-item>
-</ion-list>
-  </ion-slide>
-  <ion-slide>
-  <ion-label class="title">{{data ? data[0]['accomplishments/CIE/title'] : ""}}</ion-label>
-    <ion-list no-lines text-wrap>
-  <ion-item>
-   {{data ? data[0]['accomplishments/CIE/desc1'] : ""}}
-  </ion-item>
-  <ion-item>
-    {{data ? data[0]['accomplishments/CIE/desc2'] : ""}}
-  </ion-item>
-</ion-list>
-  </ion-slide>
-  <ion-slide>
-  	<ion-label class="title">{{data ? data[0]['accomplishments/CSPI/title'] : ""}}</ion-label>
+ <ion-slide>
+ <ion-spinner class="spinner" name="ios" *ngIf="showSpinner"></ion-spinner>
+<ion-label class="title-chart">{{data ? data[0]['accomplishments/BAU/title'] : ""}}</ion-label>
+  <ion-list no-lines text-wrap>
+    <ion-item>
+      {{data ? data[0]['accomplishments/BAU/desc1'] : ""}}
+    </ion-item>
+    <ion-item>
+      {{data ? data[0]['accomplishments/BAU/desc2'] : ""}}
+    </ion-item>
+  </ion-list>
+ </ion-slide> 
+
+   <ion-slide>
+    <ion-label class="title-chart">{{data ? data[0]['accomplishments/CSPI/title'] : ""}}</ion-label>
     <ion-list no-lines text-wrap>
   <ion-item>
    {{data ? data[0]['accomplishments/CSPI/desc1'] : ""}}
@@ -68,18 +51,42 @@
   </ion-item>
 </ion-list>
   </ion-slide>
+
+   <ion-slide>
+  <ion-label class="title-chart">{{data ? data[0]['accomplishments/CIE/title'] : ""}}</ion-label>
+    <ion-list no-lines text-wrap>
+  <ion-item>
+   {{data ? data[0]['accomplishments/CIE/desc1'] : ""}}
+  </ion-item>
+  <ion-item>
+    {{data ? data[0]['accomplishments/CIE/desc2'] : ""}}
+  </ion-item>
+</ion-list>
+  </ion-slide>
+
+  <ion-slide>
+  
+  <ion-label class="title-chart">{{data ? data[0]['accomplishments/enterpriseService/title'] : ""}}</ion-label>
+    
+    <ion-list no-lines text-wrap>
+  <ion-item >
+   	{{data ? data[0]['accomplishments/enterpriseService/desc1'] : ""}}
+  </ion-item >
+  <ion-item >
+    {{data ? data[0]['accomplishments/enterpriseService/desc2'] : ""}}
+  </ion-item >
+  <ion-item >
+    {{data ? data[0]['accomplishments/enterpriseService/desc3'] : ""}}
+  </ion-item >
+   <ion-item >
+    {{data ? data[0]['accomplishments/enterpriseService/desc4'] : ""}}
+  </ion-item>
+</ion-list>
+  </ion-slide>
  
- <ion-slide>
-<ion-label class="title">{{data ? data[0]['accomplishments/BAU/title'] : ""}}</ion-label>
- 	<ion-list no-lines text-wrap>
- 		<ion-item>
- 			{{data ? data[0]['accomplishments/BAU/desc1'] : ""}}
- 		</ion-item>
- 		<ion-item>
- 			{{data ? data[0]['accomplishments/BAU/desc2'] : ""}}
- 		</ion-item>
- 	</ion-list>
- </ion-slide> 
+
+ 
+
 </ion-slides>
 
 </ion-content>

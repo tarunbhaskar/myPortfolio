@@ -8,10 +8,22 @@ page-portfolio-roadmap {
 }
 
 .title{
-	background-color:#608178 !important;
+	background-color:#216c2b !important;
 	padding-top:10px;
 	padding-bottom:10px;
 	color: #fff;
+	margin-left:8px;
+	padding-left:8px;
+}
+
+.title-roadmap{
+	background-color:#216c2b !important;
+	padding-top:10px;
+	padding-bottom:10px;
+	color: #fff;
+	margin-left:8px;
+	padding-left:8px;
+	width:86%;
 }
 
 .swiper-icon-right{
@@ -23,15 +35,15 @@ page-portfolio-roadmap {
 }
 
 .slide-width{
-	width:38% !important;
+	width:18% !important;
 }
 
 .inner{
-	width: 1350px;
+	width: 850px;
 	height : 100%;
 	ion-card{
 	display:table-cell;
-	width:7%;
+	width:5%;
 	}
 }
 
@@ -40,7 +52,7 @@ page-portfolio-roadmap {
 }
 
 .card-width{
-	margin-right:15px ; margin-left:15px;
+	margin-right:10px ; margin-left:10px; 
 }
 
 

@@ -6,6 +6,7 @@ import {Risk} from '../risk/risk';
 import {Budget} from '../budget/budget';
 import {PortfolioRoadmap} from '../portfolio-roadmap/portfolio-roadmap';
 import {PortfolioReport} from '../portfolio-report/portfolio-report';
+import {SpeechRecognition} from '@ionic-native/speech-recognition';
 
 
 @IonicPage()
@@ -19,7 +20,14 @@ export class Structure {
 	private heading : string ="";
   private subHeading : string ="";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams ) {
+  private speechList : Array<string> = [];
+  private languagesList: Array<string>= [];
+  private permissionThere: boolean;
+  private isAvailableAndroid: boolean;
+  private hideDropdownFlag: boolean = false;
+    
+
+  constructor(private speech: SpeechRecognition ,public navCtrl: NavController, public navParams: NavParams ) {
 
   	this.clickedParameter = navParams.get('param');
 
@@ -68,6 +76,33 @@ export class Structure {
 
    	 goBack(){
   	this.navCtrl.pop();
+  }
+
+   /**********speech to text code ******************/
+
+  listenForSpeech():void { 
+    this.hideDropdownFlag = false;
+    this.speech.startListening().subscribe(data => {
+      this.speechList = data ;
+       if(this.speechList.map(this.toUpper).indexOf('GO BACK') > -1){
+       this.goBack();
+     }else if(this.speechList.map(this.toUpper).indexOf('EXECUTIVE SUMMARY') > -1 || this.speechList.map(this.toUpper).indexOf('VIEW EXECUTIVE SUMMARY') > -1 ){
+       this.viewSummary(this.clickedParameter);
+     }else if(this.speechList.map(this.toUpper).indexOf('PORTFOLIO ACTIVITIES') > -1 || this.speechList.map(this.toUpper).indexOf('PORTFOLIO ACCOMPLISHMENTS') > -1 || this.speechList.map(this.toUpper).indexOf('VIEW PORTFOLIO ACTIVITIES') > -1 || this.speechList.map(this.toUpper).indexOf('PORTFOLIO ACCOMPLISHMENTS') > -1 ){
+       this.viewPortfolioActivity(this.clickedParameter);
+     }else if(this.speechList.map(this.toUpper).indexOf('RISK AND ISSUES') > -1 || this.speechList.map(this.toUpper).indexOf('VIEW RISK AND ISSUES') > -1){
+       this.viewRisk();
+     }else if(this.speechList.map(this.toUpper).indexOf('BUSINESS VOLUME') > -1 || this.speechList.map(this.toUpper).indexOf('VIEW BUSINESS VOLUME') > -1 ){
+       this.viewBusinessVol(this.clickedParameter);
+     }else if(this.speechList.map(this.toUpper).indexOf('PORTFOLIO ROADMAP') > -1 || this.speechList.map(this.toUpper).indexOf('VIEW PORTFOLIO ROADMAP') > -1 ){
+       this.viewRoadmap(this.clickedParameter);
+     }
+
+   });
+     }
+
+  toUpper(x):string{
+    return x.toUpperCase();
   }
 
 }

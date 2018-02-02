@@ -25,16 +25,13 @@
 <ion-spinner class="spinner" name="ios" *ngIf="showSpinner"></ion-spinner>
 <ion-grid>
   <ion-row align-items-start class="header">
-    <ion-col col-3>
-      Portfolio
-    </ion-col >
-    <ion-col col-3>
+    <ion-col col-4>
       Risk/Issue
     </ion-col>
-    <ion-col col-3>
+    <ion-col col-4>
      Impact
     </ion-col>
-    <ion-col col-3>
+    <ion-col col-4>
       Notes
     </ion-col>
   </ion-row>
@@ -42,16 +39,13 @@
   
 
   <ion-row align-items-start *ngFor='let det of data | search:searchText'>
-    <ion-col col-3>
-     {{det ? det.Portfolio : ""}}
-    </ion-col>
-    <ion-col col-3>
+    <ion-col col-4>
       {{det?det.Issue :""}}
     </ion-col>
-    <ion-col col-3>
+    <ion-col col-4>
       {{det?det.Impact :""}}
     </ion-col>
-    <ion-col col-3>
+    <ion-col col-4>
       {{det?det.Notes:""}}
     </ion-col>
   </ion-row>

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {DataService} from '../../providers/data-service';
 import {NgCalendarModule} from 'ionic2-calendar';
 import {RoadMapDetail} from '../../pages/road-map-detail/road-map-detail';
+import {PassDataService} from '../../providers/pass-data-service';
 
 /**
  * Generated class for the PortfolioRoadmap page.
@@ -14,7 +15,7 @@ import {RoadMapDetail} from '../../pages/road-map-detail/road-map-detail';
 @Component({
   selector: 'page-portfolio-roadmap',
   templateUrl: 'portfolio-roadmap.html',
-  providers: [DataService]
+  providers: [DataService , PassDataService]
 })
 export class PortfolioRoadmap {
 
@@ -24,7 +25,7 @@ export class PortfolioRoadmap {
     private  showSpinner:boolean = false;
     private showQuaterResult: string = '';
 
-  constructor(public navCtrl: NavController, public navParams: NavParams , public dataService :  DataService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams , public dataService :  DataService , public passDataService : PassDataService) {
     this.showSpinner = true;
   	this.showInformation = false;
   	this.parameter1 = navParams.get('paramPassed');
@@ -34,7 +35,9 @@ export class PortfolioRoadmap {
      ngOnInit() {
 
      this.showQuaterResult = 'Q1';
-            this.loadAll();
+           this.loadAll();
+
+       //  this.data = this.passDataService.getDataDetail();
     }
 
     loadAll() {

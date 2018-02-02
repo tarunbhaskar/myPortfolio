@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {DataService} from '../../providers/data-service';
 import {AppView} from '../app-view/app-view';
 import {AppDetailsService} from '../../providers/app-details-service';
+import {PassDataService} from '../../providers/pass-data-service';
 
 /**
  * Generated class for the Summary page.
@@ -14,7 +15,7 @@ import {AppDetailsService} from '../../providers/app-details-service';
 @Component({
   selector: 'page-summary',
   templateUrl: 'summary.html',
-  providers: [DataService, AppDetailsService]
+  providers: [DataService, AppDetailsService, PassDataService]
 })
 export class Summary {
 		private data : any;
@@ -23,8 +24,9 @@ export class Summary {
      private showSpinner:boolean = false;
      private appDetailsData : any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams , public dataService :  DataService , public appDetailsService : AppDetailsService) {
-    this.showSpinner =true;
+  constructor(public navCtrl: NavController, public navParams: NavParams , 
+    public dataService :  DataService , public appDetailsService : AppDetailsService , public passDataService: PassDataService) {
+   this.showSpinner =true;
   	this.showInformation = false;
   	this.parameter1 = navParams.get('paramPassed');
   }
@@ -32,7 +34,8 @@ export class Summary {
     ngOnInit() {
             this.loadAll();
             this.loadAppDetail();
-            
+         // this.data = this.passDataService.getDataDetail();         
+         //  this.appDetailsData = this.passDataService.getAppDetail();            
     }
 
     loadAll() {
@@ -53,10 +56,6 @@ export class Summary {
       });
 
     }
-
-
-
-
 
    showInfo(){
   		this.showInformation = !this.showInformation;

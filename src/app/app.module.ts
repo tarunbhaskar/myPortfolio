@@ -25,6 +25,8 @@ import {RiskService} from '../providers/risk-service';
 import {PortfolioReportService} from '../providers/portfolio-report-service';
 import {Search} from '../pipes/search';
 
+import { SpeechRecognition } from '@ionic-native/speech-recognition';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -68,7 +70,8 @@ import {Search} from '../pipes/search';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DataService,
     RiskService,
-    PortfolioReportService
+    PortfolioReportService,
+    SpeechRecognition
 
   ]
 })

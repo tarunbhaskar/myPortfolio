@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {DataService} from '../../providers/data-service'
+import {DataService} from '../../providers/data-service';
+import {PassDataService} from '../../providers/pass-data-service';
 
 
 /**
@@ -21,14 +22,16 @@ export class RoadMapDetail {
   private  errorMessage: string;
     private showSpinner:boolean = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams , public dataService : DataService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams , public dataService : DataService , public passDataService: PassDataService) {
     this.showSpinner = true;
   	this.parameter1 = navParams.get('param');
   }
 
   ngOnInit() {
            
-            this.loadAll();
+           this.loadAll();
+        //  this.data = this.passDataService.getDataDetail();
+
     }
 
     loadAll() {

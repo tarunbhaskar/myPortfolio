@@ -45,7 +45,11 @@
 <ion-content padding *ngIf="parameter1 == 'dir1'" >
  <ion-spinner class="spinner" name="ios" *ngIf="showSpinner"></ion-spinner>
 
-<ion-label class="subHeadingTitle">Lead - {{data ? data[0].firstName : ""}} {{data ? data[0].lastName : ""}}</ion-label>
+<ion-label class="subHeadingTitle">Lead - {{data ? data[0].firstName : ""}} {{data ? data[0].lastName : ""}}
+<a href="tel::{{5712656593}}" class="call">
+          <ion-icon name="call" item-left style="margin-left:15px;"></ion-icon>
+        </a>
+</ion-label>
 
 
 <ion-slides pager>

@@ -18,7 +18,14 @@
 
 
 <ion-content padding>
-<ion-label class="subHeadingTitle">Lead - {{subHeading}}</ion-label>
+<ion-label class="subHeadingTitle">Lead - {{subHeading}}
+
+<a href="tel::{{5712656593}}" class="call">
+          <ion-icon name="call" item-left style="margin-left:15px;"></ion-icon>
+        </a>
+
+</ion-label>
+
 <ion-list no-lines>
   <ion-item>
     <h2>Executive Summary</h2>
@@ -46,10 +53,10 @@
     <button ion-button clear item-right (click)="viewRoadmap(clickedParameter)">View</button>
   </ion-item>
 </ion-list>
-
-
 </ion-content>
 
  <ion-footer>
-        <p class="text-color">@Fannie Mae</p>
+        <p class="text-color">@Fannie Mae
+             <ion-icon class= "custom-icon-mic"  name="mic" item-right (click)="listenForSpeech()"></ion-icon>
+        </p>
  </ion-footer>
